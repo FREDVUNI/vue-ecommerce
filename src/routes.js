@@ -8,7 +8,7 @@ import Newrelease from "./Newrelease"
 import Pricing from "./Pricing"
 import Admin from "./Admin"
 
-vue.use(Router)
+Vue.use(Router)
 
 const router = new Router({
     routes:[
@@ -18,27 +18,27 @@ const router = new Router({
             name:"home"
         },
         {
-            path:"./new-release",
+            path:"/new-release",
             component:Newrelease,
             name:"new-release"
         },
         {
-            path:"./dashboard",
+            path:"/dashboard",
             component:Admin,
             name:"admin"
         },
         {
-            path:"./pricing",
+            path:"/pricing",
             component:Pricing,
             name:"pricing"
         },
         {
-            path:"./signin",
+            path:"/signin",
             component:Signin,
             name:"signin"
         },
         {
-            path:"./signup",
+            path:"/signup",
             component:Signup,
             name:"signup"
         },

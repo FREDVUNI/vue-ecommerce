@@ -1,47 +1,39 @@
 <template>
   <header id="masthead-pro">
 			<div class="container">
-				<h1><a href="index.html"><img src="assets/images/arvest.png" alt="Logo"></a></h1>
+				<h1><a href="/"><img src="assets/images/arvest.png" alt="Logo"></a></h1>
 				<nav id="site-navigation-pro">
 					<ul class="sf-menu">
-                        <li class="normal-item-pro">
-							<MenuLink path="/" text="Home"></MenuLink>
-						</li>
-                        <li class="normal-item-pro">
-							<MenuLink path="/" text="New Releases"></MenuLink>
-						</li>
-                        <li class="normal-item-pro">
-							<MenuLink path="/" text="Pricing Plans"></MenuLink>
-						</li>
+						<MenuLink path="/" text="Home"></MenuLink>
+						<MenuLink path="/new-release" text="New Releases"></MenuLink>
+						<MenuLink path="/pricing" text="Pricing Plans"></MenuLink>
+						<MenuLink path="/signin" text="sign in"></MenuLink>
+						<MenuLink path="/signup" text="sign up"></MenuLink>
 					</ul>
 				</nav>
-				<button class="btn btn-header-pro noselect" data-toggle="modal" data-target="#LoginModal" role="button">Sign In</button>
 				<div id="mobile-bars-icon-pro" class="noselect"><i class="fas fa-bars"></i></div>
 				<div class="clearfix"></div>
 			</div>
 			<nav id="mobile-navigation-pro">
 				<ul id="mobile-menu-pro">
-					<li>
-						<a href="index.html">Home</a>
-					</li>
-					<li>
-						<a href="dashboard-home.html">New Releases</a>
-					</li>
-					<li>
-						<a href="signup-step1.html">Pricing Plans</a>
-					</li>
+					<MobileLink path="/" text="Home"></MobileLink>
+					<MobileLink path="/new-release" text="New Releases"></MobileLink>
+					<MobileLink path="/pricing" text="Pricing Plans"></MobileLink>
+					<MobileLink path="/signin" text="sign in"></MobileLink>
+					<MobileLink path="/signup" text="sign up"></MobileLink>
 				</ul>
 				<div class="clearfix"></div>
-				<button class="btn btn-mobile-pro btn-green-pro noselect" data-toggle="modal" data-target="#LoginModal" role="button">Sign In</button>
 			</nav>
   </header>
 </template>
 
 <script>
-import MenuLink from "./MenuLink"
+import MenuLink from "./MenuLink";
+import MobileLink from "./MobileLink";
 export default {
     components:{
-        MenuLink
+		MenuLink,
+		MobileLink
     },
 }
 </script>
