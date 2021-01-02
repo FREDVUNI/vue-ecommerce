@@ -292,7 +292,8 @@ header#masthead-pro h1 img {
 }
 
 header#masthead-pro {
-	position:relative;
+	position:fixed;
+	width: 100%;
 	z-index:50;
 	background:#ffffff;
 	box-shadow: 0px 0px 10px rgba(0,0,0,  0.06);
@@ -358,6 +359,7 @@ nav#site-navigation-pro {
 	color:#272727;
 	font-size:13px;
 	padding:37px 20px;
+	
 }
 
 .sf-menu a:hover, .sf-menu li.sfHover a, .sf-menu li.current-menu-item a {

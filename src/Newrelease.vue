@@ -3,7 +3,7 @@
       <div class="container">
          <div class="row">
             <div class="mx-auto">
-               <div style="height:70px;"></div>
+               <div style="height:170px;"></div>
                <h2 class="short-border-bottom">New Releases</h2>
             </div>
          </div>
