@@ -10,6 +10,7 @@
          <div style="height:25px;"></div>
          <div class="mx-auto col-md-6">
             <form id="login" action="" method="POST">
+            <div class="alert alert-danger form-group mt-2">This is an error.</div>
                <div class="form-group">
                   <label for="email">Email:</label>
                   <input id="email" name="email" class="form-control" type="email" placeholder="Enter your email address." value="" autofocus>
@@ -74,5 +75,8 @@
       border: 1px solid #ced4da;
       border-radius: 0px;
       transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+   }
+   .alert{
+      border-radius: 0px;
    }
 </style>

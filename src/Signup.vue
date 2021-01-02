@@ -9,7 +9,7 @@
          </div>
          <!-- close .row -->
          <div style="height:25px;"></div>
-         <div class="mx-auto col-md-6">
+         <div class="mx-auto col-md-8">
             <form @submit.prevent="signup()" action="/signup" method="POST">
                <div class="form-group">
                   <label for="firstname">First name:</label>
@@ -48,6 +48,7 @@
                      <button id="registerbtn" class="btn-block btn-green-pro">REGISTER</button>
                   </div>
                </div>
+               <Alert></Alert>
             </form>
          </div>
          <!-- close .pricing-table-pro -->
@@ -57,11 +58,45 @@
    </div>
 </template>
 <script>
+   import Alert from "./cmps/Alert"
    export default {
+      data(){
+         return{
+            firstname:"",
+            lastname:"",
+            email:"",
+            phone:"",
+            password:"",
+            confirm:"",
+            tcs:"",
+            msg:null,
+            classAlert:null
+         }
+      },
       methods:{
          signup(){
-            console.log("registerrrrr...")
+            const form =  new FormData()
+            form.append("firstname", this.firstname)
+            form.append("lastname", this.lastname)
+            form.append("email", this.email)
+            form.append("phone", this.phone)
+            form.append("password", this.password)
+            form.append("confirm", this.confirm)
+            form.append("tcs", this.tcs)
+
+            this.$guest.post("/register",form)
+            .then(() =>{
+               this.msg ="Your account has been created."
+               this.classAlert="success"
+            })
+            .catch(err => {
+               this.msg = err.response.data.message.console.error(),
+               this.classAlert ="danger"
+            })
          }
+      },
+      components:{
+         Alert,
       }
    }
 </script>
@@ -92,5 +127,8 @@
       border: 1px solid #ced4da;
       border-radius: 0px;
       transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+   }
+   .alert{
+      border-radius: 0px;
    }
 </style>
