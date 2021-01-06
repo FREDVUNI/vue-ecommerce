@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div :class="'alert alert-'+ activeClass +'form-group mt-2'" v-html="msg"></div>
+    <div :class="'form-group alert alert-'+ ClassAlert" v-html="msg"></div>
   </div>
 </template>
 
 <script>
 export default {
-    props:["msg","activeClass"]
+    props:["msg","ClassAlert"]
 }
 </script>
 

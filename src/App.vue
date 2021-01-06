@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-nav></app-nav>
+    <app-nav :loggedIn="loggedIn"></app-nav>
     <div>
       <router-view></router-view>
     </div>
@@ -10,6 +10,11 @@
 <script>
 import Navbar  from "./cmps/Navbar";
 export default {
+  data(){
+    return{
+      
+    }
+  },
   name: 'App',
   components:{
     appNav: Navbar, 

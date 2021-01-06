@@ -9,11 +9,11 @@
          </div>
          <div style="height:25px;"></div>
          <div class="mx-auto col-md-6">
-            <form id="login" action="" method="POST">
-            <div class="alert alert-danger form-group mt-2">This is an error.</div>
+            <alert v-if="msg" :msg="msg" :ClassAlert="classAlert"></alert>
+            <form id="login" @submit.prevent="signin()"  action="/signin" method="POST">
                <div class="form-group">
                   <label for="email">Email:</label>
-                  <input id="email" name="email" class="form-control" type="email" placeholder="Enter your email address." value="" autofocus>
+                  <input id="email" name="email" class="form-control" type="email" placeholder="Enter your email address." value="" autofocus v-model="email">
                </div>
                <div class="g-mb-35">
                   <div class="row justify-content-between">
@@ -21,11 +21,11 @@
                         <label for="password">Password:</label>
                      </div>
                      <div class="col align-self-center text-right">
-                        <a class="d-inline-block g-font-size-12 mb-2 mr-3" href=""> Forgot password ?</a>
+                        <router-link to="/forgot-password"> Forgot password ?</router-link>
                      </div>
                   </div>
                   <div class="form-group">
-                     <input id="password" name="password" class="form-control" type="password" placeholder="Password" value="" >
+                     <input id="password" name="password" class="form-control" type="password" placeholder="Password" value="" v-model="password">
                   </div>
                   <div class="row mt-3 form-group">
                      <button id="loginbtn" class="btn-block btn-green-pro">LOGIN</button>
@@ -33,7 +33,7 @@
                </div>
             </form>
              <footer class="text-center mb-5">
-                <p class="g-color-gray-dark-v5 g-font-size-13 mb-0">Don't have an account yet ? <a class="d-inline-block g-font-size-12" href="/signup">signup</a>
+                <p class="g-color-gray-dark-v5 g-font-size-13 mb-0">Don't have an account yet ? <router-link to="/signup">signup</router-link>
                 </p>
               </footer>
          </div>
@@ -44,8 +44,55 @@
    </div>
 </template>
 <script>
+   import Alert from "./cmps/Alert";
    export default {
-   
+      data(){
+         return{
+            token:null,
+            expires_in:null,
+
+            email:"",
+            password:"",
+            msg:null,
+            ClassAlert:null
+         }
+      },
+      methods:{
+         signin(){
+            const form = new FormData();
+            form.append("email",this.email)
+            form.append("password",this.password)
+
+            this.$guest.post("/login",form)
+            .then(() =>{
+               this.msg ="Login successful.";
+               this.classAlert="success";
+
+               /*this.token = res.data.token
+               this.expires_in = res.data.expires_in
+               const expiresMs = this.expires_in * 1000
+               const now = new Date()
+               const expireDate = new Date(now.getTime() + expiresMs)
+               localStorage.setItem("token",this.token)
+               localStorage.setItem("expires_in",expireDate)
+
+               //set up the storage to dispatch
+               this.$store.dispatch("login",expiresMs)*/
+                
+               this.email="";
+               this.password="";
+
+               this.$router.push("/dashboard")
+            })
+            .catch(err => {
+               this.msg = err.response.data.message;
+               this.classAlert = "danger";
+            });
+         }
+      },
+      components:{
+         Alert
+      }
    }
 </script>
 <style>
@@ -78,5 +125,8 @@
    }
    .alert{
       border-radius: 0px;
+   }
+   p{
+      margin-bottom: 0px;
    }
 </style>

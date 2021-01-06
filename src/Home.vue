@@ -9,9 +9,9 @@
                         <div class="container">
                            <div class="progression-studios-slider-caption-width">
                               <div class="progression-studios-slider-caption-align">
-                                 <h2>Welcome to SKRN<span style="color:#3db13d;">.</span></h2>
-                                 <h6>Watch the largest collection of Movies and TV series anytime anywhere!</h6>
-                                 <a class="btn btn-green-pro btn-slider-pro btn-shadow-pro" href="signup-step1.html" role="button">Start Your Free Trial</a>
+                                 <h2>Welcome to Arvest Ug<span style="color:#3db13d;">.</span></h2>
+                                 <h6>Grow your income today as we bring you 1000 + 1 agribusiness Ideas with unlimited online videos to get you started</h6>
+                                 <router-link to="/signup" class="btn btn-green-pro btn-slider-pro btn-shadow-pro"> Start Your Free Trial</router-link>
                               </div>
                               <!-- close .progression-studios-slider-caption-align -->
                            </div>
@@ -33,9 +33,9 @@
                         <div class="container">
                            <div class="progression-studios-slider-caption-width">
                               <div class="progression-studios-slider-caption-align">
-                                 <h2 class="light-fonts-pro">Central Intelligence</h2>
-                                 <h6 class="light-fonts-pro">Let users watch videos on any page via the built-in video player.</h6>
-                                 <a class="btn btn-green-pro btn-slider-pro" href="dashboard-home.html" role="button">View The Video Library</a>
+                                 <h2 class="light-fonts-pro">Agriculture Loans</h2>
+                                 <h6 class="light-fonts-pro">We guarantee easy access to affordable or even free agriculture loans to improve your production.</h6>
+                                 <router-link to="/signup" class="btn btn-green-pro btn-slider-pro btn-shadow-pro"> Start Your Free Trial</router-link>
                               </div>
                               <!-- close .progression-studios-slider-caption-align -->
                            </div>
@@ -56,9 +56,9 @@
                         <div class="container">
                            <div class="progression-studios-slider-caption-width">
                               <div class="progression-studios-slider-caption-align">
-                                 <h2>Ultimate Video Theme</h2>
-                                 <h6>Watch the largest collection of Movies and TV series anytime anywhere!</h6>
-                                 <a class="btn btn-green-pro btn-slider-pro btn-shadow-pro" href="signup-step1.html" role="button">Start Your Free Trial</a>
+                                 <h2>Agro-Inputs & Market Linkages</h2>
+                                 <h6>Get genuine agro-inputs from credible suppliers and easy access to consistent market</h6>
+                                 <router-link to="/signup" class="btn btn-green-pro btn-slider-pro btn-shadow-pro"> Start Your Free Trial</router-link>
                               </div>
                               <!-- close .progression-studios-slider-caption-align -->
                            </div>
@@ -84,20 +84,24 @@
                </div>
                <div class="col-md my-auto">
                   <!-- .my-auto vertically centers contents -->
-                  <h2 class="short-border-bottom">Watch On Any Device</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing nula pellentesquemagna a convallis nula facilisi. Praesent consequat eget elementumconsectetur. Nullam interdum, quam ac sagittis facilisis sapien dolor ipsum consequat ellit tristique senectus</p>
+                  <h2 class="short-border-bottom">About  Arvest Ug</h2>
+                  <p>Arvest is an Online TV show for Agro-Economists standing for Agriculture Research, Value addition, Engineering, Science and Technology (ARVEST). Our goal is to improve agriculture in Uganda through providing Agriculture trainings conducted online, Quality Forums, Practical Education, Access to Loans and market Linkages for AgriBusiness Entrepreneurs</p>
                   <div style="height:15px;"></div>
-                  <p><a class="btn btn-green-pro" href="signup-step1.html" role="button">Learn More</a></p>
+                  <p>
+                     <router-link to="/signup" class="btn btn-green-pro"> GET STARTED </router-link>
+                  </p>
                </div>
             </div>
             <!-- close .row -->
             <div class="row">
                <div class="col-md my-auto">
                   <!-- .my-auto vertically centers contents -->
-                  <h2 class="short-border-bottom">Make Your Own Playlist</h2>
-                  <p>Curabitur at lobortis leo varius tellus. Phasellus id purus placeratfinibus diam a, feugiat massa. Donec porta orci lectus, ut lacinia risus fringilla nulla facilisi suspendisse eget id justo ac magna finibus dignissim. Integer purus feugiat gravida convalis,</p>
+                  <h2 class="short-border-bottom">Watch in HD on the App</h2>
+                  <p>Have unlimited access to all our videos, new updates, opportunities and all our services through our mobile app Arvest ug. Simply download the Arvest App on your smartphone or tablet and get started</p>
                   <div style="height:15px;"></div>
-                  <p><a class="btn btn-green-pro" href="signup-step1.html" role="button">Start Watching</a></p>
+                  <p>
+                     <router-link to="/" class="btn btn-green-pro"> DOWNLOAD NOW </router-link>
+                  </p>
                </div>
                <div class="col-md my-auto">
                   <!-- .my-auto vertically centers contents -->
@@ -112,10 +116,12 @@
                </div>
                <div class="col-md my-auto">
                   <!-- .my-auto vertically centers contents -->
-                  <h2 class="short-border-bottom">Watch in Ultra HD</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing nula pellentesquemagna a convallis nula facilisi. Praesent consequat eget elementumconsectetur. Nullam interdum, quam ac sagittis facilisis sapien dolor ipsum consequat ellit tristique senectus</p>
+                  <h2 class="short-border-bottom">Watch in HD on your Laptop or TV</h2>
+                  <p>With your laptop / desktop or Smart TV click on any browser on your device.Login to your account or create an account here Enjoy unlimited videos of your choice for: free, starters, premium</p>
                   <div style="height:15px;"></div>
-                  <p><a class="btn btn-green-pro" href="signup-step1.html" role="button">Start Your Free Trial</a></p>
+                  <p>
+                     <router-link to="/signup" class="btn btn-green-pro"> START FOR FREE </router-link>
+                  </p>
                </div>
             </div>
             <!-- close .row -->
@@ -137,20 +143,20 @@
                <div class="row">
                   <div class="col-md">
                      <ul class="checkmark-list-pro">
-                        <li>1 month unlimited access!</li>
-                        <li>Thousands of TV shows, movies &amp; more.</li>
+                        <li>24 hour Access anytime anywhere!</li>
+                        <li>Thousands of Agriculture lessons and shows</li>
                      </ul>
                   </div>
                   <div class="col-md">
                      <ul class="checkmark-list-pro">
-                        <li>Stream on your phone, laptop, tablet or TV.</li>
-                        <li>You can even Download & watch offline.</li>
+                        <li>Stream on any device Phone, Laptop,Tablet or TV.</li>
+                        <li>Download and watch offline.</li>
                      </ul>
                   </div>
                   <div class="col-md">
                      <ul class="checkmark-list-pro">
-                        <li>1 month unlimited access!</li>
-                        <li>Thousands of TV shows, movies &amp; more.</li>
+                        <li>Access to experts to answer your questions</li>
+                        <li>Access to affordable agriculture loans</li>
                      </ul>
                   </div>
                </div>
@@ -160,14 +166,16 @@
                      <div class="col-md">
                         <div class="pricing-table-col">
                            <h6>FREE TRIAL</h6>
-                           <h2>Free</h2>
+                           <h4>Free</h4>
                            <ul>
-                              <li>720p Available</li>
+                              <li>Full HD Videos</li>
                               <li>Watch on any Device</li>
-                              <li>20 Movies and Shows</li>
+                              <li>20 lessons and Agriculture shows</li>
                               <li>Download Available</li>
                            </ul>
-                           <p><a class="btn" href="signup-step2.html" role="button">Choose Plan</a></p>
+                           <p>
+                              <router-link to="/signup" class="btn btn-green-pro"> Choose Plan </router-link>
+                           </p>
                         </div>
                         <!-- close .pricing-table-col -->
                      </div>
@@ -175,14 +183,16 @@
                      <div class="col-md">
                         <div class="pricing-table-col pricing-table-col-shadow-pro">
                            <h6>STARTER</h6>
-                           <h2><sup>$</sup>10<span> / month</span></h2>
+                           <h4>UGX 2K /24 Hours</h4>
                            <ul>
-                              <li>HD Available</li>
-                              <li>Watch on any Device</li>
-                              <li>70 Movies and Shows</li>
+                              <li>Full HD Videos</li>
+                              <li>Watch on any device</li>
+                              <li>Unlimited lessons and Agriculture shows</li>
                               <li>Download Available</li>
                            </ul>
-                           <p><a class="btn btn-green-pro" href="signup-step2.html" role="button">Choose Plan</a></p>
+                           <p>
+                              <router-link to="/signup" class="btn btn-green-pro"> Choose Plan </router-link>
+                           </p>
                         </div>
                         <!-- close .pricing-table-col -->
                      </div>
@@ -190,14 +200,16 @@
                      <div class="col-md">
                         <div class="pricing-table-col">
                            <h6>PREMIUM</h6>
-                           <h2><sup>$</sup>14<span> / month</span></h2>
+                           <h4>UGX 30K /month</h4>
                            <ul>
-                              <li>Ultra HD Available</li>
+                              <li>Full HD Videos</li>
                               <li>Watch on any Device</li>
-                              <li>Unlimited Movies and Shows</li>
+                              <li>Unlimited lessons and Agriculture shows</li>
                               <li>Download Available</li>
                            </ul>
-                           <p><a class="btn" href="signup-step2.html" role="button">Choose Plan</a></p>
+                           <p>
+                              <router-link to="/signup" class="btn btn-green-pro"> Choose Plan </router-link>
+                           </p>
                         </div>
                         <!-- close .pricing-table-col -->
                      </div>

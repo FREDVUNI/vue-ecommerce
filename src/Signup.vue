@@ -10,7 +10,7 @@
          <!-- close .row -->
          <div style="height:25px;"></div>
          <div class="mx-auto col-md-8">
-            <form @submit.prevent="signup()" action="/signup" method="POST">
+            <form @submit.prevent="register()" action="/register" method="POST">
                <div class="form-group">
                   <label for="firstname">First name:</label>
                   <input id="firstname" name="firstname" class="form-control" type="text" placeholder="Enter your first name." value="" autofocus v-model="firstname">
@@ -28,8 +28,16 @@
                   <input id="phone" name="phone" class="form-control" type="text" placeholder="Enter your phone." value="" v-model="phone">
                </div>
                <div class="form-group">
+                  <label for="gender">Gender:</label>
+                  <select name="gender" id="gender" class="form-control" v-model="gender">
+                     <option value="">Choose a gender</option>
+                     <option value="Female">Female</option>
+                     <option value="Male">Male</option>
+                  </select>
+               </div>
+               <div class="form-group">
                   <label for="password">Password:</label>
-                  <input id="password" name="password" class="form-control" type="password" placeholder="Enter your password." value="" v-model="pasword">
+                  <input id="password" name="password" class="form-control" type="password" placeholder="Enter your password." value="" v-model="password">
                </div>
                <div class="form-group">
                   <label for="confirm">Confirm Password:</label>
@@ -48,7 +56,7 @@
                      <button id="registerbtn" class="btn-block btn-green-pro">REGISTER</button>
                   </div>
                </div>
-               <Alert></Alert>
+               <alert v-if="msg" :msg="msg" :ClassAlert="classAlert"></alert>
             </form>
          </div>
          <!-- close .pricing-table-pro -->
@@ -66,39 +74,50 @@
             lastname:"",
             email:"",
             phone:"",
+            gender:"",
             password:"",
             confirm:"",
             tcs:"",
             msg:null,
             classAlert:null
-         }
+         };
       },
       methods:{
-         signup(){
-            const form =  new FormData()
+         register(){
+            const form =  new FormData();
             form.append("firstname", this.firstname)
             form.append("lastname", this.lastname)
             form.append("email", this.email)
             form.append("phone", this.phone)
             form.append("password", this.password)
+            form.append("gender", this.gender)
             form.append("confirm", this.confirm)
             form.append("tcs", this.tcs)
 
             this.$guest.post("/register",form)
             .then(() =>{
-               this.msg ="Your account has been created."
-               this.classAlert="success"
+               this.msg ="Your account has been created.";
+               this.classAlert="success";
+
+               this.firstname="";
+               this.lastname="";
+               this.email="";
+               this.phone="";
+               this.gender="";
+               this.password="";
+               this.confirm="";
+               this.tcs="";
             })
             .catch(err => {
-               this.msg = err.response.data.message.console.error(),
-               this.classAlert ="danger"
-            })
+               this.msg = err.response.data.message;
+               this.classAlert = "danger";
+            });
          }
       },
       components:{
-         Alert,
+         Alert
       }
-   }
+   };
 </script>
 <style>
    #registerbtn{
