@@ -132,7 +132,7 @@
       height: calc(1.6em + 1.625rem);
       cursor: pointer;
     }
-    .form-control {
+   .form-control {
       display: block;
       width: 100%;
       height: calc(1.6em + 1.625rem);

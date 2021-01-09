@@ -10,11 +10,11 @@
 <script>
 import Navbar  from "./cmps/Navbar";
 export default {
-  data(){
-    return{
-      
-    }
-  },
+ computed:{
+    loggedIn(){
+      return this.$store.getters.loginState;
+    } 
+ },
   name: 'App',
   components:{
     appNav: Navbar, 

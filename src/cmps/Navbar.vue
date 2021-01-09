@@ -1,6 +1,6 @@
 <template>
    <div>
-      <header id="masthead-pro" v-if="! loggedIn">
+      <header id="masthead-pro" v-if="!loggedIn">
          <div class="container">
             <h1><a href="/"><img src="assets/images/arvest.png" alt="Logo"></a></h1>
             <nav id="site-navigation-pro">
@@ -26,8 +26,8 @@
             <div class="clearfix"></div>
          </nav>
       </header>
-      <header id="videohead-pro" class="sticky-header" v-else>
-         <div id="video-logo-background"><a href="dashboard-home.html"><img src="images/logo-video-layout.png" alt="Logo"></a></div>
+      <header id="videohead-pro" class="sticky-header" v-if="loggedIn">
+         <div id="video-logo-background"><a href="dashboard-home.html"><img src="assets/images/arvest.png" alt="Logo"></a></div>
          <div id="video-search-header">
             <div id="search-icon-more"></div>
             <input type="text" placeholder="Search for Movies or TV Series" aria-label="Search">

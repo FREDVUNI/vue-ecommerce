@@ -49,7 +49,7 @@
       data(){
          return{
             token:null,
-            expires_in:null,
+            expires:null,
 
             email:"",
             password:"",
@@ -63,29 +63,33 @@
             form.append("email",this.email)
             form.append("password",this.password)
 
-            this.$guest.post("/login",form)
-            .then(() =>{
+            this.$guest
+            .post("/login",form)
+            .then(res =>{
                this.msg ="Login successful.";
                this.classAlert="success";
 
-               /*this.token = res.data.token
-               this.expires_in = res.data.expires_in
-               const expiresMs = this.expires_in * 1000
-               const now = new Date()
-               const expireDate = new Date(now.getTime() + expiresMs)
-               localStorage.setItem("token",this.token)
-               localStorage.setItem("expires_in",expireDate)
-
-               //set up the storage to dispatch
-               this.$store.dispatch("login",expiresMs)*/
-                
                this.email="";
                this.password="";
 
-               this.$router.push("/dashboard")
+               this.token = res.data.access_token;
+               this.expires = res.data.expires;
+               console.log(this.expires)
+
+               const expiresMs = this.expires * 1000;
+               const now = new Date();
+               const expireDate = new Date(now.getTime() + expiresMs);
+
+               localStorage.setItem("token",this.token);
+               localStorage.setItem("expires",expireDate);
+
+               //set up the storage to dispatch
+               this.$store.dispatch("login",expiresMs);
+
+              // this.$router.push("/dashboard")
             })
             .catch(err => {
-               this.msg = err.response.data.message;
+               this.msg = err.response.data.error_description;
                this.classAlert = "danger";
             });
          }
