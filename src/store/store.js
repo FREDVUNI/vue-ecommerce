@@ -16,7 +16,7 @@ export const store = new Vuex.Store({
     mutations:{
         login(state){
             state.isLoggedIn = true;
-            if(router.currentRoute.name !== "Home")
+            if(router.currentRoute.name !== "Admin")
             router.push("/dashboard");
         },
         logout(state){

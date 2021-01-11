@@ -2,32 +2,46 @@
    <div>
       <header id="masthead-pro" v-if="!loggedIn">
          <div class="container">
-            <h1><a href="/"><img src="assets/images/arvest.png" alt="Logo"></a></h1>
+            <h1>
+               <router-link :to="(loggedIn ? '/dashboard': '/')">
+               <img src="assets/images/arvest.png" alt="Logo">
+            </router-link>
+            </h1>
             <nav id="site-navigation-pro">
-               <ul class="sf-menu">
+               <ul class="sf-menu" v-if="!loggedIn">
                   <MenuLink path="/" text="Home"></MenuLink>
                   <MenuLink path="/new-release" text="New Releases"></MenuLink>
                   <MenuLink path="/pricing" text="Pricing Plans"></MenuLink>
                   <MenuLink path="/signin" text="sign in"></MenuLink>
                   <MenuLink path="/signup" text="sign up"></MenuLink>
                </ul>
+               <ul class="sf-menu" v-else>
+                  <MenuLink path="/dashboard" text="Dashboard"></MenuLink>
+               </ul>
             </nav>
             <div id="mobile-bars-icon-pro" class="noselect"><i class="fas fa-bars"></i></div>
             <div class="clearfix"></div>
          </div>
          <nav id="mobile-navigation-pro">
-            <ul id="mobile-menu-pro">
+            <ul id="mobile-menu-pro" v-if="!loggedIn">
                <MobileLink path="/" text="Home"></MobileLink>
                <MobileLink path="/new-release" text="New Releases"></MobileLink>
                <MobileLink path="/pricing" text="Pricing Plans"></MobileLink>
                <MobileLink path="/signin" text="sign in"></MobileLink>
                <MobileLink path="/signup" text="sign up"></MobileLink>
             </ul>
+             <ul class="sf-menu" v-else>
+                  <MenuLink path="/dashboard" text="Dashboard" :to="(loggedIn ? '/dashboard': '/signup')"></MenuLink>
+               </ul>
             <div class="clearfix"></div>
          </nav>
       </header>
-      <header id="videohead-pro" class="sticky-header" v-if="loggedIn">
-         <div id="video-logo-background"><a href="dashboard-home.html"><img src="assets/images/arvest.png" alt="Logo"></a></div>
+      <header id="videohead-pro" class="sticky-header" v-else>
+         <div id="video-logo-background">
+            <router-link :to="(loggedIn ? '/dashboard': '/')">
+               <img src="assets/images/arvest.png" alt="Logo">
+            </router-link>
+         </div>
          <div id="video-search-header">
             <div id="search-icon-more"></div>
             <input type="text" placeholder="Search for Movies or TV Series" aria-label="Search">
@@ -138,7 +152,12 @@
                   <li><a href="dashboard-favorites.html"><span class="icon-Favorite-Window"></span>My Favorites</a></li>
                   <li><a href="dashboard-account.html"><span class="icon-Gears"></span>Account Details</a></li>
                   <li><a href="#!"><span class="icon-Life-Safer"></span>Help/Support</a></li>
-                  <li><a href="index.html"><span class="icon-Power-3"></span>Log Out</a></li>
+                  <li>
+                     <a href="#" @click.prevent="logout()">
+                        <span class="icon-Power-3"></span>
+                        Log Out
+                     </a>
+                  </li>
                </ul>
             </div>
          </div>
@@ -267,6 +286,11 @@ export default {
 		MenuLink,
 		MobileLink
     },
+    methods:{
+       logout(){
+         this.$store.dispatch('logout')
+       }
+    }
 }
 </script>
 

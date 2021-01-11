@@ -1,5 +1,5 @@
 <template>
-<div class="progression-pricing-section-background">
+         <div>
             <div class="container">
                <div class="row">
                   <div class="mx-auto">
