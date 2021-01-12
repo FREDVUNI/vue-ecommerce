@@ -89,7 +89,8 @@
               // this.$router.push("/dashboard")
             })
             .catch(err => {
-               this.msg = err.response.data.error_description;
+               this.msg = err.response.data.message;
+               this.error = err.response.data.error_description;
                this.classAlert = "danger";
             });
          }

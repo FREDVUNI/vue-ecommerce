@@ -536,7 +536,24 @@
 
 <script>
 export default {
+   methods:{
+      get(){
+         this.$api
+         .get('/categories')
+         .then(res=>{
+            this.categories = res.data 
+         })
+         .catch(err => {
+            this.msg = err.response.data.message;
+            this.classAlert = "danger";
 
+            console.log(err.response)
+         })
+      }
+   },
+   created(){
+      this.get();
+   },
 }
 </script>
 

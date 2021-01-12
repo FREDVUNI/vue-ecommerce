@@ -30,10 +30,10 @@ export default {
         this.$store.dispatch('login',expireMs - now)
       }
     }else{
-      if(this.$router.currentRoute.name !== 'Signin')
-       this.$router.push({name:'Signin'})
-
-    }
+      if(this.$router.currentRoute.name !== 'signin')
+       this.$router.push({name:'home'})
+      }
+    
   },
   name: 'App',
   components:{

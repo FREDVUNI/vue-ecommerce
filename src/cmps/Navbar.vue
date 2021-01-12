@@ -4,8 +4,8 @@
          <div class="container">
             <h1>
                <router-link :to="(loggedIn ? '/dashboard': '/')">
-               <img src="assets/images/arvest.png" alt="Logo">
-            </router-link>
+                  <img src="assets/images/arvest.png" alt="Logo">
+               </router-link>
             </h1>
             <nav id="site-navigation-pro">
                <ul class="sf-menu" v-if="!loggedIn">
@@ -31,7 +31,7 @@
                <MobileLink path="/signup" text="sign up"></MobileLink>
             </ul>
              <ul class="sf-menu" v-else>
-                  <MenuLink path="/dashboard" text="Dashboard" :to="(loggedIn ? '/dashboard': '/signup')"></MenuLink>
+                  <MenuLink path="/dashboard" text="Dashboard"></MenuLink>
                </ul>
             <div class="clearfix"></div>
          </nav>
