@@ -7,6 +7,8 @@ import Signup from "./Signup"
 import Newrelease from "./Newrelease"
 import Pricing from "./Pricing"
 import Admin from "./Admin"
+import Category from "./Category"
+import Video from "./Video"
 
 Vue.use(Router)
 
@@ -26,6 +28,22 @@ const router = new Router({
             path:"/dashboard",
             component:Admin,
             name:"admin",
+            meta: {
+                requiresAuth: true
+            }
+        },
+        {
+            path:"/video/:slug",
+            component:Video,
+            name:"video",
+            meta: {
+                requiresAuth: true
+            }
+        },
+        {
+            path:"/category/:slug",
+            component:Category,
+            name:"category",
             meta: {
                 requiresAuth: true
             }

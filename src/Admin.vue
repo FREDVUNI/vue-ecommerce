@@ -152,374 +152,14 @@
          </ul>
       </div>
       <!-- close .progression-studios-slider - See /js/script.js file for options -->
-      <ul class="dashboard-genres-pro">
-         <li>
-            <img src="assets/images/genres/drama.png" alt="Drama">
-            <h6>Drama</h6>
-         </li>
-         <li class="active">
-            <img src="assets/images/genres/comedy.png" alt="Comedy">
-            <h6>Comedy</h6>
-         </li>
-         <li>
-            <img src="assets/images/genres/action.png" alt="Action">
-            <h6>Action</h6>
-         </li>
-         <li>
-            <img src="assets/images/genres/romance.png" alt="Romance">
-            <h6>Romance</h6>
-         </li>
-         <li>
-            <img src="assets/images/genres/horror.png" alt="Horror">
-            <h6>Horror</h6>
-         </li>
-         <li>
-            <img src="assets/images/genres/fantasy.png" alt="Fantasy">
-            <h6>Fantasy</h6>
-         </li>
-         <li>
-            <img src="assets/images/genres/sci-fi.png" alt="Sci-Fi">
-            <h6>Sci-Fi</h6>
-         </li>
-         <li>
-            <img src="assets/images/genres/thriller.png" alt="Thriller">
-            <h6>Thriller</h6>
-         </li>
-         <li>
-            <img src="assets/images/genres/western.png" alt="Western">
-            <h6>Western</h6>
-         </li>
-         <li>
-            <img src="assets/images/genres/adventure.png" alt="Adventure">
-            <h6>Adventure</h6>
-         </li>
-         <li>
-            <img src="assets/images/genres/animation.png" alt="Animation">
-            <h6>Animation</h6>
-         </li>
-         <li>
-            <img src="assets/images/genres/documentary.png" alt="Documentary">
-            <h6>Documentary</h6>
-         </li>
-      </ul>
+  <ul class="dashboard-genres-pro">
+     <div class="row">
+      <CategoryItem v-for="(category,index) in categories" :key="category.category_id" :category="category" :index="index"></CategoryItem>
+     </div>
+  </ul>
       <div class="clearfix"></div>
       <div class="dashboard-container">
-         <h4 class="heading-extra-margin-bottom">Comedies</h4>
-         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-               <div class="item-listing-container-skrn">
-                  <a href="dashboard-movie-profile.html"><img src="assets/images/demo/listing-1.jpg" alt="Listing"></a>
-                  <div class="item-listing-text-skrn">
-                     <div class="item-listing-text-skrn-vertical-align">
-                        <h6><a href="dashboard-movie-profile.html">The Wild Things Are</a></h6>
-                        <div
-                           class="circle-rating-pro"
-                           data-value="0.86"
-                           data-animation-start-value="0.86"
-                           data-size="32"
-                           data-thickness="3"
-                           data-fill="{
-                           &quot;color&quot;: &quot;#42b740&quot;
-                           }"
-                           data-empty-fill="#def6de"
-                           data-reverse="true"
-                           ><span style="color:#42b740;">8.6</span></div>
-                     </div>
-                     <!-- close .item-listing-text-skrn-vertical-align -->
-                  </div>
-                  <!-- close .item-listing-text-skrn -->
-               </div>
-               <!-- close .item-listing-container-skrn -->
-            </div>
-            <!-- close .col -->
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-               <div class="item-listing-container-skrn">
-                  <a href="dashboard-movie-profile.html"><img src="assets/images/demo/listing-2.jpg" alt="Listing"></a>
-                  <div class="item-listing-text-skrn">
-                     <div class="item-listing-text-skrn-vertical-align">
-                        <h6><a href="dashboard-movie-profile.html">Central Intelligence</a></h6>
-                        <div
-                           class="circle-rating-pro"
-                           data-value="0.6"
-                           data-animation-start-value="0.6"
-                           data-size="32"
-                           data-thickness="3"
-                           data-fill="{
-                           &quot;color&quot;: &quot;#ff4141&quot;
-                           }"
-                           data-empty-fill="#ffe1e1"
-                           data-reverse="true"
-                           ><span style="color:#ff4141;">6.0</span></div>
-                     </div>
-                     <!-- close .item-listing-text-skrn-vertical-align -->
-                  </div>
-                  <!-- close .item-listing-text-skrn -->
-               </div>
-               <!-- close .item-listing-container-skrn -->
-            </div>
-            <!-- close .col -->
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-               <div class="item-listing-container-skrn">
-                  <a href="dashboard-movie-profile.html"><img src="assets/images/demo/listing-3.jpg" alt="Listing"></a>
-                  <div class="item-listing-text-skrn">
-                     <div class="item-listing-text-skrn-vertical-align">
-                        <h6><a href="dashboard-movie-profile.html">Zoolander No. 2</a></h6>
-                        <div
-                           class="circle-rating-pro"
-                           data-value="0.86"
-                           data-animation-start-value="0.86"
-                           data-size="32"
-                           data-thickness="3"
-                           data-fill="{
-                           &quot;color&quot;: &quot;#42b740&quot;
-                           }"
-                           data-empty-fill="#def6de"
-                           data-reverse="true"
-                           ><span style="color:#42b740;">8.6</span></div>
-                     </div>
-                     <!-- close .item-listing-text-skrn-vertical-align -->
-                  </div>
-                  <!-- close .item-listing-text-skrn -->
-               </div>
-               <!-- close .item-listing-container-skrn -->
-            </div>
-            <!-- close .col -->
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-               <div class="item-listing-container-skrn">
-                  <a href="dashboard-movie-profile.html"><img src="assets/images/demo/listing-4.jpg" alt="Listing"></a>
-                  <div class="item-listing-text-skrn">
-                     <div class="item-listing-text-skrn-vertical-align">
-                        <h6><a href="dashboard-movie-profile.html">Bad Neighbors 2</a></h6>
-                        <div
-                           class="circle-rating-pro"
-                           data-value="0.72"
-                           data-animation-start-value="0.72"
-                           data-size="32"
-                           data-thickness="3"
-                           data-fill="{
-                           &quot;color&quot;: &quot;#42b740&quot;
-                           }"
-                           data-empty-fill="#def6de"
-                           data-reverse="true"
-                           ><span style="color:#42b740;">7.2</span></div>
-                     </div>
-                     <!-- close .item-listing-text-skrn-vertical-align -->
-                  </div>
-                  <!-- close .item-listing-text-skrn -->
-               </div>
-               <!-- close .item-listing-container-skrn -->
-            </div>
-            <!-- close .col -->
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-               <div class="item-listing-container-skrn">
-                  <a href="dashboard-movie-profile.html"><img src="assets/images/demo/listing-5.jpg" alt="Listing"></a>
-                  <div class="item-listing-text-skrn">
-                     <div class="item-listing-text-skrn-vertical-align">
-                        <h6><a href="dashboard-movie-profile.html">Star Wars: Rogue One</a></h6>
-                        <div
-                           class="circle-rating-pro"
-                           data-value="0.86"
-                           data-animation-start-value="0.86"
-                           data-size="32"
-                           data-thickness="3"
-                           data-fill="{
-                           &quot;color&quot;: &quot;#42b740&quot;
-                           }"
-                           data-empty-fill="#def6de"
-                           data-reverse="true"
-                           ><span style="color:#42b740;">8.6</span></div>
-                     </div>
-                     <!-- close .item-listing-text-skrn-vertical-align -->
-                  </div>
-                  <!-- close .item-listing-text-skrn -->
-               </div>
-               <!-- close .item-listing-container-skrn -->
-            </div>
-            <!-- close .col -->
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-               <div class="item-listing-container-skrn">
-                  <a href="dashboard-movie-profile.html"><img src="assets/images/demo/listing-6.jpg" alt="Listing"></a>
-                  <div class="item-listing-text-skrn">
-                     <div class="item-listing-text-skrn-vertical-align">
-                        <h6><a href="dashboard-movie-profile.html">The Imitation Game</a></h6>
-                        <div
-                           class="circle-rating-pro"
-                           data-value="0.6"
-                           data-animation-start-value="0.6"
-                           data-size="32"
-                           data-thickness="3"
-                           data-fill="{
-                           &quot;color&quot;: &quot;#ff4141&quot;
-                           }"
-                           data-empty-fill="#ffe1e1"
-                           data-reverse="true"
-                           ><span style="color:#ff4141;">6.0</span></div>
-                     </div>
-                     <!-- close .item-listing-text-skrn-vertical-align -->
-                  </div>
-                  <!-- close .item-listing-text-skrn -->
-               </div>
-               <!-- close .item-listing-container-skrn -->
-            </div>
-            <!-- close .col -->
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-               <div class="item-listing-container-skrn">
-                  <a href="dashboard-movie-profile.html"><img src="assets/images/demo/listing-7.jpg" alt="Listing"></a>
-                  <div class="item-listing-text-skrn">
-                     <div class="item-listing-text-skrn-vertical-align">
-                        <h6><a href="dashboard-movie-profile.html">Fantastic Beasts</a></h6>
-                        <div
-                           class="circle-rating-pro"
-                           data-value="0.86"
-                           data-animation-start-value="0.86"
-                           data-size="32"
-                           data-thickness="3"
-                           data-fill="{
-                           &quot;color&quot;: &quot;#42b740&quot;
-                           }"
-                           data-empty-fill="#def6de"
-                           data-reverse="true"
-                           ><span style="color:#42b740;">8.6</span></div>
-                     </div>
-                     <!-- close .item-listing-text-skrn-vertical-align -->
-                  </div>
-                  <!-- close .item-listing-text-skrn -->
-               </div>
-               <!-- close .item-listing-container-skrn -->
-            </div>
-            <!-- close .col -->
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-               <div class="item-listing-container-skrn">
-                  <a href="dashboard-movie-profile.html"><img src="assets/images/demo/listing-8.jpg" alt="Listing"></a>
-                  <div class="item-listing-text-skrn">
-                     <div class="item-listing-text-skrn-vertical-align">
-                        <h6><a href="dashboard-movie-profile.html">Edge of Tomorrow</a></h6>
-                        <div
-                           class="circle-rating-pro"
-                           data-value="0.72"
-                           data-animation-start-value="0.72"
-                           data-size="32"
-                           data-thickness="3"
-                           data-fill="{
-                           &quot;color&quot;: &quot;#42b740&quot;
-                           }"
-                           data-empty-fill="#def6de"
-                           data-reverse="true"
-                           ><span style="color:#42b740;">7.2</span></div>
-                     </div>
-                     <!-- close .item-listing-text-skrn-vertical-align -->
-                  </div>
-                  <!-- close .item-listing-text-skrn -->
-               </div>
-               <!-- close .item-listing-container-skrn -->
-            </div>
-            <!-- close .col -->
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-               <div class="item-listing-container-skrn">
-                  <a href="dashboard-movie-profile.html"><img src="assets/images/demo/listing-9.jpg" alt="Listing"></a>
-                  <div class="item-listing-text-skrn">
-                     <div class="item-listing-text-skrn-vertical-align">
-                        <h6><a href="dashboard-movie-profile.html">Allegiant</a></h6>
-                        <div
-                           class="circle-rating-pro"
-                           data-value="0.86"
-                           data-animation-start-value="0.86"
-                           data-size="32"
-                           data-thickness="3"
-                           data-fill="{
-                           &quot;color&quot;: &quot;#42b740&quot;
-                           }"
-                           data-empty-fill="#def6de"
-                           data-reverse="true"
-                           ><span style="color:#42b740;">8.6</span></div>
-                     </div>
-                     <!-- close .item-listing-text-skrn-vertical-align -->
-                  </div>
-                  <!-- close .item-listing-text-skrn -->
-               </div>
-               <!-- close .item-listing-container-skrn -->
-            </div>
-            <!-- close .col -->
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-               <div class="item-listing-container-skrn">
-                  <a href="dashboard-movie-profile.html"><img src="assets/images/demo/listing-10.jpg" alt="Listing"></a>
-                  <div class="item-listing-text-skrn">
-                     <div class="item-listing-text-skrn-vertical-align">
-                        <h6><a href="dashboard-movie-profile.html">Lo and Behold</a></h6>
-                        <div
-                           class="circle-rating-pro"
-                           data-value="0.6"
-                           data-animation-start-value="0.6"
-                           data-size="32"
-                           data-thickness="3"
-                           data-fill="{
-                           &quot;color&quot;: &quot;#ff4141&quot;
-                           }"
-                           data-empty-fill="#ffe1e1"
-                           data-reverse="true"
-                           ><span style="color:#ff4141;">6.0</span></div>
-                     </div>
-                     <!-- close .item-listing-text-skrn-vertical-align -->
-                  </div>
-                  <!-- close .item-listing-text-skrn -->
-               </div>
-               <!-- close .item-listing-container-skrn -->
-            </div>
-            <!-- close .col -->
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-               <div class="item-listing-container-skrn">
-                  <a href="dashboard-movie-profile.html"><img src="assets/images/demo/listing-11.jpg" alt="Listing"></a>
-                  <div class="item-listing-text-skrn">
-                     <div class="item-listing-text-skrn-vertical-align">
-                        <h6><a href="dashboard-movie-profile.html">Drive</a></h6>
-                        <div
-                           class="circle-rating-pro"
-                           data-value="0.86"
-                           data-animation-start-value="0.86"
-                           data-size="32"
-                           data-thickness="3"
-                           data-fill="{
-                           &quot;color&quot;: &quot;#42b740&quot;
-                           }"
-                           data-empty-fill="#def6de"
-                           data-reverse="true"
-                           ><span style="color:#42b740;">8.6</span></div>
-                     </div>
-                     <!-- close .item-listing-text-skrn-vertical-align -->
-                  </div>
-                  <!-- close .item-listing-text-skrn -->
-               </div>
-               <!-- close .item-listing-container-skrn -->
-            </div>
-            <!-- close .col -->
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-               <div class="item-listing-container-skrn">
-                  <a href="dashboard-movie-profile.html"><img src="assets/images/demo/listing-12.jpg" alt="Listing"></a>
-                  <div class="item-listing-text-skrn">
-                     <div class="item-listing-text-skrn-vertical-align">
-                        <h6><a href="dashboard-movie-profile.html">Nightcrawler</a></h6>
-                        <div
-                           class="circle-rating-pro"
-                           data-value="0.72"
-                           data-animation-start-value="0.72"
-                           data-size="32"
-                           data-thickness="3"
-                           data-fill="{
-                           &quot;color&quot;: &quot;#42b740&quot;
-                           }"
-                           data-empty-fill="#def6de"
-                           data-reverse="true"
-                           ><span style="color:#42b740;">7.2</span></div>
-                     </div>
-                     <!-- close .item-listing-text-skrn-vertical-align -->
-                  </div>
-                  <!-- close .item-listing-text-skrn -->
-               </div>
-               <!-- close .item-listing-container-skrn -->
-            </div>
-            <!-- close .col -->
-         </div>
-         <!-- close .row -->
+         <VideoItem  v-for="(video,index) in videos" :key="video.video_id" :video="video" :index="index"></VideoItem>
          <ul class="page-numbers">
             <li><a class="previous page-numbers" href="#!"><i class="fas fa-chevron-left"></i></a></li>
             <li><span class="page-numbers current">1</span></li>
@@ -535,9 +175,20 @@
 </template>
 
 <script>
+import CategoryItem from "./cmps/CategoryItem";
+import VideoItem from "./cmps/VideoItem";
 export default {
+   data(){
+      return{
+         category_id: null,
+         categories:[],
+         description:"",
+         video_id:null,
+         videos:[],
+      };
+   },
    methods:{
-      get(){
+      getcategories(){
          this.$api
          .get('/categories')
          .then(res=>{
@@ -549,10 +200,31 @@ export default {
 
             console.log(err.response)
          })
-      }
+      },
+      getvideos(){
+         this.$api
+         .get('/videos')
+         .then(res=>{
+            this.videos = res.data 
+         })
+         .catch(err => {
+            this.msg = err.response.data.message;
+            this.classAlert = "danger";
+
+            console.log(err.response)
+         })
+      },
+   },
+   components:{
+      CategoryItem,
+      VideoItem,
+   },
+   mounted: function() {
+    //flexslider();
    },
    created(){
-      this.get();
+      this.getcategories();
+      this.getvideos();
    },
 }
 </script>
