@@ -1,11 +1,8 @@
 <template>
-<div>
-  <div v-if="category">
-      <main id="col-main">
-      <div class="flexslider progression-studios-dashboard-slider">
+   <div class="flexslider progression-studios-dashboard-slider">
          <ul class="slides">
             <li class="progression_studios_animate_left">
-               <div class="progression-studios-slider-dashboard-image-background" style="background-image:url(assets/images/demo/dashboard-slide-1.jpg);">
+               <div class="progression-studios-slider-dashboard-image-background" style="background-image:url(http://localhost/agronet/assets/backend/images/uploads/slider/dashboard-slide-1.jpg);">
                   <div class="progression-studios-slider-display-table">
                      <div class="progression-studios-slider-vertical-align">
                         <div class="container">
@@ -78,7 +75,7 @@
                <!-- close .progression-studios-slider-image-background -->
             </li>
             <li class="progression_studios_animate_in">
-               <div class="progression-studios-slider-dashboard-image-background" style="background-image:url(assets/images/demo/dashboard-slide-2.jpg);">
+               <div class="progression-studios-slider-dashboard-image-background" style="background-image:url(http://localhost/agronet/assets/backend/images/uploads/slider/dashboard-slide-2.jpg);">
                   <div class="progression-studios-slider-display-table">
                      <div class="progression-studios-slider-vertical-align">
                         <div class="container">
@@ -152,61 +149,12 @@
             </li>
          </ul>
       </div>
-      <div class="clearfix"></div>
-      <div class="dashboard-container">
-         <h5>Video by category</h5>
-         <div class="row">
-            <CategoryVideo v-for="(cat,index) in category" :key="cat.video_id" :index="index" :cat="cat"></CategoryVideo>
-         </div>
-         <ul class="page-numbers">
-            <li><a class="previous page-numbers" href="#!"><i class="fas fa-chevron-left"></i></a></li>
-            <li><span class="page-numbers current">1</span></li>
-            <li><a class="page-numbers" href="#!">2</a></li>
-            <li><a class="page-numbers" href="#!">3</a></li>
-            <li><a class="page-numbers" href="#!">4</a></li>
-            <li><a class="next page-numbers" href="#!"><i class="fas fa-chevron-right"></i></a></li>
-         </ul>
-      </div>
-      <!-- close .dashboard-container -->
-   </main>
-  </div>
-  <div v-else>
-     
-  </div>
-</div>  
 </template>
 
 <script>
-import CategoryVideo from "./cmps/CategoryVideo";
-
 export default {
-    data(){
-      return{
-         //category:false,
-         category:[],
-         video_id: null,
-      }
-    },
-    methods:{
-        getcategory(){
-          var slug = this.$route.params.slug
-          this.$api
-          .get("/category/" + slug)
-          .then(res=>{
-              this.category = res.data
-          })
-          .catch(err=>{
-              console.log(err.response)
-          })
-        }
-    },
-    components:{
-       CategoryVideo
-    },
-    created(){
-        this.getcategory();
-    },
-    
+   name: 'FlexSlider',
+  
 }
 </script>
 

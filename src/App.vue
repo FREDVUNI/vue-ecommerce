@@ -31,7 +31,7 @@ export default {
       }
     }else{
       if(this.$router.currentRoute.name !== 'signin')
-       this.$router.push({name:'home'})
+        this.$router.push({name:'home'})
       }
     
   },

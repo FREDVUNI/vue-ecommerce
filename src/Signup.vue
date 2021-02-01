@@ -56,6 +56,10 @@
                      <button id="registerbtn" class="btn-block btn-green-pro">REGISTER</button>
                   </div>
                </div>
+               <footer class="text-center mb-5">
+                <p class="g-color-gray-dark-v5 g-font-size-13 mb-0">Already have an account ? <router-link to="/signin">signin</router-link>
+                </p>
+              </footer>
                <alert v-if="msg" :msg="msg" :ClassAlert="classAlert"></alert>
             </form>
          </div>

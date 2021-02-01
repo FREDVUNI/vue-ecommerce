@@ -9,6 +9,7 @@ import Pricing from "./Pricing"
 import Admin from "./Admin"
 import Category from "./Category"
 import Video from "./Video"
+import Profile from "./Profile"
 
 Vue.use(Router)
 
@@ -44,6 +45,14 @@ const router = new Router({
             path:"/category/:slug",
             component:Category,
             name:"category",
+            meta: {
+                requiresAuth: true
+            }
+        },
+        {
+            path:"/profile/:user_id",
+            component:Profile,
+            name:"profile",
             meta: {
                 requiresAuth: true
             }

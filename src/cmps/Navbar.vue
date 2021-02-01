@@ -148,7 +148,11 @@
             </div>
             <div id="header-user-profile-menu">
                <ul>
-                  <li><a href="dashboard-profile.html"><span class="icon-User"></span>My Profile</a></li>
+                  <li>
+                     <router-link :to="(loggedIn ? '/profile/': '/')">
+                        <span class="icon-User"></span> My Profile
+                     </router-link>
+                     </li>
                   <li><a href="dashboard-favorites.html"><span class="icon-Favorite-Window"></span>My Favorites</a></li>
                   <li><a href="dashboard-account.html"><span class="icon-Gears"></span>Account Details</a></li>
                   <li><a href="#!"><span class="icon-Life-Safer"></span>Help/Support</a></li>
@@ -282,15 +286,37 @@ import MenuLink from "./MenuLink";
 import MobileLink from "./MobileLink";
 export default {
 	props:['loggedIn'],
+   data(){
+      return{
+         profile:[],
+         user_id:"",
+      }
+   },
     components:{
 		MenuLink,
-		MobileLink
+      MobileLink,
     },
     methods:{
        logout(){
          this.$store.dispatch('logout')
-       }
-    }
+       },
+       getuser(){
+         this.$api
+         .get('/profile')
+         .then(res=>{
+            this.profile = res.data 
+         })
+         .catch(err => {
+            this.msg = err.response.data.message;
+            this.classAlert = "danger";
+
+            console.log(err.response)
+         })
+      },
+    },
+    created(){
+      this.getuser();
+   },
 }
 </script>
 
