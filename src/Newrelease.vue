@@ -13,7 +13,7 @@
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                <div class="item-listing-container-skrn">
                   <a href="dashboard-movie-profile.html">
-                  <img src="assets/images/demo/listing-1.jpg" alt="Listing">
+                  <img src="http://localhost/agronet/assets/backend/images/uploads/categories/category.png" alt="listing">
                   </a>
                   <div class="item-listing-text-skrn">
                      <div class="item-listing-text-skrn-vertical-align">
@@ -34,7 +34,7 @@
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                <div class="item-listing-container-skrn">
                   <a href="dashboard-movie-profile.html">
-                  <img src="assets/images/demo/listing-1.jpg" alt="Listing">
+                     <img src="http://localhost/agronet/assets/backend/images/uploads/categories/category.png" alt="listing">
                   </a>
                   <div class="item-listing-text-skrn">
                      <div class="item-listing-text-skrn-vertical-align">
@@ -55,7 +55,7 @@
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                <div class="item-listing-container-skrn">
                   <a href="dashboard-movie-profile.html">
-                  <img src="assets/images/demo/listing-1.jpg" alt="Listing">
+                     <img src="http://localhost/agronet/assets/backend/images/uploads/categories/category.png" alt="listing">
                   </a>
                   <div class="item-listing-text-skrn">
                      <div class="item-listing-text-skrn-vertical-align">
@@ -76,7 +76,7 @@
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                <div class="item-listing-container-skrn">
                   <a href="dashboard-movie-profile.html">
-                  <img src="assets/images/demo/listing-1.jpg" alt="Listing">
+                     <img src="http://localhost/agronet/assets/backend/images/uploads/categories/category.png" alt="listing">
                   </a>
                   <div class="item-listing-text-skrn">
                      <div class="item-listing-text-skrn-vertical-align">

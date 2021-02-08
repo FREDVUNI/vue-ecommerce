@@ -148,10 +148,11 @@
                <!-- close .progression-studios-slider-image-background -->
             </li>
          </ul>
-      </div>
+   </div>
 </template>
 
 <script>
+
 export default {
    name: 'FlexSlider',
   
